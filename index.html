@@ -1,796 +1,928 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--==================== UNICONS ====================-->
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
-        
-        <!--==================== SWIPER CSS====================-->
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!--==================== UNICONS ====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    
+    <!--==================== SWIPER CSS====================-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
-        <!--==================== CSS ==========-->
-        <link rel="stylesheet" href="assets/css/styles.css">
+    <!--==================== CSS ==========-->
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-        <title>Alexei's Portfolio Website</title>
-    </head>
-    <body>
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="#" class="nav__logo">Alexei Timbro</a>
+    <title>Alexei's Portfolio Website</title>
+</head>
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Alexei Timbro</a>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list grid">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">
-                                <i class="uil uil-estate nav__icon"></i> Home
-                            </a>
-                        </li>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link" data-lang-key="home">
+                            <i class="uil uil-estate nav__icon"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link" data-lang-key="about">
+                            <i class="uil uil-user nav__icon"></i> About
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link" data-lang-key="skills">
+                            <i class="uil uil-file-alt nav__icon"></i> Skills
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#qualifications" class="nav__link" data-lang-key="qualifications">
+                            <i class="uil uil-award nav__icon"></i> Qualification
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link" data-lang-key="portfolio">
+                            <i class="uil uil-scenery nav__icon"></i> Portfolio
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link" data-lang-key="contact">
+                            <i class="uil uil-message nav__icon"></i> Contact Me
+                        </a>
+                    </li>
+                </ul>
+                
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+            </div>
 
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link">
-                                <i class="uil uil-user nav__icon"></i> About
-                            </a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="#skills" class="nav__link">
-                                <i class="uil uil-file-alt nav__icon"></i> Skills
-                            </a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="#qualification" class="nav__link">
-                                <i class="uil uil-award nav__icon"></i> Qualification
-                            </a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="#portfolio" class="nav__link">
-                                <i class="uil uil-scenery nav__icon"></i> Portfolio
-                            </a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="#contact" class="nav__link">
-                                <i class="uil uil-message nav__icon"></i> Contact Me
-                            </a>
-                        </li>
-
-                    </ul>
-                    
-                    <i class="uil uil-times nav__close" id="nav-close"></i>
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
                 </div>
-
-                <div class="nav__btns">
-                    <!-- Theme change button -->
-                    <i class="uil uil-moon change-theme" id="theme-button"></i>
-
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="uil uil-apps"></i>
-                    </div>
-                </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
+    </header>
 
         <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home section" id="home">
-                <div class="home__container container grid">
-                    <div class="home__content grid">
-                        <div class="home__social">
-                            <a href="https://www.linkedin.com/in/alexei-timbro/" target="_blank" class="home__social-icon">
-                                <i class="uil uil-linkedin-alt"></i>
-                            </a>
-    
-                            <a href="https://github.com/AlexeiTimbro" target="_blank" class="home__social-icon">
-                                <i class="uil uil-github-alt"></i>                            
-                            </a>
-                        </div>
-    
-                        <div class="home__img">
-                            <svg class="home__blob" viewBox="0 0 200 187">
-                                <mask id="mask0" mask-type="alpha">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                </mask>
-                                <g mask="url(#mask0)">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+<main class="main">
+    <!--==================== HOME ====================-->
+    <section class="home section" id="home">
+        <div class="home__container container grid">
+            <div class="home__content grid">
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/alexei-timbro/" target="_blank" class="home__social-icon" data-lang-key="linkedin">
+                        <i class="uil uil-linkedin-alt"></i>
+                    </a>
 
-                                    <!--==================== 
-                                        Insert your image in the Img folder and Change your image |
-                                        Center your image with X: horizontal, Y: vertical 
-                                    ====================-->
-                                    <image class="home__blob-img" x="5" y="20" href="assets/img/goat.png"/>
+                    <a href="https://github.com/AlexeiTimbro" target="_blank" class="home__social-icon" data-lang-key="github">
+                        <i class="uil uil-github-alt"></i>                            
+                    </a>
+                </div>
 
-                                </g>
-                            </svg>
-                        </div>
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 200 187">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                            130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                            97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                            0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                            165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                            129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                            -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
 
-                        <div class="home__data">
-                            <h1 class="home__title">Hi, I'm Alexei</h1>
-                            <h3 class="home__subtitle">Full-Stack Developer</h3>
-                            <p class="home__description">Third-year Computer Science student at Champlain College
-                                with expertise in full-stack development.</p>
-                            <a href="#about" class="button button--flex">
-                                 My CV<i class="uil uil-message button__icon"></i>
-                            </a>
-                        </div>
+                            <!--==================== 
+                                Insert your image in the Img folder and Change your image |
+                                Center your image with X: horizontal, Y: vertical 
+                            ====================-->
+                            <image class="home__blob-img" x="5" y="20" href="assets/img/goat.png"/>
+
+                        </g>
+                    </svg>
+                </div>
+
+                <div class="home__data">
+                    <h1 class="home__title" data-lang-key="home_title">Hi, I'm Alexei</h1>
+                    <h3 class="home__subtitle" data-lang-key="home_subtitle">Full-Stack Developer</h3>
+                    <p class="home__description" data-lang-key="home_description">
+                        Third-year Computer Science student at Champlain College with expertise in full-stack development.
+                    </p>
+                    <a href="#about" class="button button--flex" data-lang-key="home_cv_button">
+                        My CV<i class="uil uil-message button__icon"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="home__scroll">
+                <a href="#about" class="home__scroll-button button--flex" data-lang-key="home_scroll">
+                    <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                    <span class="home__scroll-name">Scroll down</span>
+                    <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--==================== ABOUT ====================-->
+    <section class="about section" id="about">
+        <h2 class="section__title" data-lang-key="about_title">About Me</h2>
+        <span class="section__subtitle" data-lang-key="about_subtitle">My introduction</span>
+        <div class="about__container container grid">
+            <img src="assets/img/goat.jpg" alt="" class="about__img">
+            <div class="about__data">
+                <p class="about__description" data-lang-key="about_description">
+                    Full-Stack web developer, with extensive knowledge and a passion for technologies, working out, cars and an exquisite fashion sense.
+                </p>
+
+                <div class="about__info">
+                    <div>
+                        <span class="about__info-title" data-lang-key="about_experience_years">03+</span>
+                        <span class="about__info-name" data-lang-key="about_experience">Years <br> experience</span>
                     </div>
 
-                    
-                    <div class="home__scroll">
-                        <a href="#about" class="home__scroll-button button--flex">
-                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                            <span class="home__scroll-name">Scroll down</span>
-                            <i class="uil uil-arrow-down home__scroll-arrow"></i>
-                        </a>
+                    <div>
+                        <span class="about__info-title" data-lang-key="about_projects_completed">08+</span>
+                        <span class="about__info-name" data-lang-key="about_projects">Completed <br> projects</span>
+                    </div>
+
+                    <div>
+                        <span class="about__info-title" data-lang-key="about_companies_worked">01+</span>
+                        <span class="about__info-name" data-lang-key="about_companies">Companies <br> worked</span>
                     </div>
                 </div>
-            </section>
 
-            <!--==================== ABOUT ====================-->
-            <section class="about section" id="about">
-                <h2 class="section__title">About Me</h2>
-                <span class="section__subtitle">My introduction</span>
-
-                <div class="about__container container grid">
-                    <img src="assets/img/goat.jpg" alt="" class="about__img">
-
-                    <div class="about__data">
-                        <p class="about__description">Full-Stack web developer, with extensive knowledge and a passion for technologies, working out, cars and an exquisite fashion sense.
-                        </p>
-
-                        <div class="about__info">
-                            <div>
-                                <span class="about__info-title">03+</span>
-                                <span class="about__info-name">Years <br> experience</span>
-                            </div>
-
-                            <div>
-                                <span class="about__info-title">08+</span>
-                                <span class="about__info-name">Completed <br> projects</span>
-                            </div>
-
-                            <div>
-                                <span class="about__info-title">01+</span>
-                                <span class="about__info-name">Companies <br> worked</span>
-                            </div>
-                        </div>
-
-                        <div class="about__buttons">
-                            <!--==================== Change your CV ====================-->
-                            <a href="https://drive.google.com/file/d/1Mkhlu6dUnEKsLV3bfDeOG-7MbMbDPPQl/view?usp=sharing" class="button button--flex" target="_blank">
-                                Download CV <i class="uil uil-download-alt button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
+                <div class="about__buttons">
+                    <a href="https://drive.google.com/file/d/1Mkhlu6dUnEKsLV3bfDeOG-7MbMbDPPQl/view?usp=sharing" class="button button--flex" target="_blank" data-lang-key="about_download_cv">
+                        Download CV <i class="uil uil-download-alt button__icon"></i>
+                    </a>
                 </div>
-            </section>
+            </div>
+        </div>
+    </section>
 
             <!--==================== SKILLS ====================-->
-            <section class="skills section" id="skills">
-                <h2 class="section__title">Skills</h2>
-                <span class="section__subtitle">My technical level</span>
+<section class="skills section" id="skills">
+    <h2 class="section__title" data-lang-key="skillsTitle">Skills</h2>
+    <span class="section__subtitle" data-lang-key="skillsSubtitle">My technical level</span>
 
-                <div class="skills__container container grid">
+    <div class="skills__container container grid">
+        <div>
+            <!--=============== SKILLS 1 ===============-->
+            <div class="skills__content skills__open">
+                <div class="skills__header">
+                    <i class="uil uil-brackets-curly skills__icon"></i>
+
                     <div>
-                        <!--=============== SKILLS 1 ===============-->
-                        <div class="skills__content skills__open">
-                            <div class="skills__header">
-                                <i class="uil uil-brackets-curly skills__icon"></i>
-    
-                                <div>
-                                    <h1 class="skills__title">Frontend developer</h1>
-                                    <span class="skills__subtitle">Full-Stack</span>
-                                </div>
-    
-                                <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-    
-                            <div class="skills__list grid">
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">HTML</h3>
-                                        <span class="skills__number">90%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__html"></span>
-                                    </div>
-                                </div>
-    
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">CSS</h3>
-                                        <span class="skills__number">80%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__css"></span>
-                                    </div>
-                                </div>
-    
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">JavaScript</h3>
-                                        <span class="skills__number">60%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__js"></span>
-                                    </div>
-                                </div>
-    
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">ReactJs</h3>
-                                        <span class="skills__number">85%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__react"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <!--=============== SKILLS 2 ===============-->
-                        <div class="skills__content skills__close">
-                            <div class="skills__header">
-                                <i class="uil uil-server-network skills__icon"></i>
-    
-                                <div>
-                                    <h1 class="skills__title">Backend developer</h1>
-                                    <span class="skills__subtitle">Full-Stack</span>
-                                </div>
-    
-                                <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-    
-                            <div class="skills__list grid">
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">JAVA</h3>
-                                        <span class="skills__number">100%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__php"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Python</h3>
-                                        <span class="skills__number">60%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__firebase"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Spring Boot</h3>
-                                        <span class="skills__number">95%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__firebase"></span>
-                                    </div>
-                                </div>
-    
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Swift</h3>
-                                        <span class="skills__number">70%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__python"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <h1 class="skills__title" data-lang-key="skills1Title">Frontend developer</h1>
+                        <span class="skills__subtitle" data-lang-key="skills1Subtitle">Full-Stack</span>
                     </div>
 
-                    <div>
-                        <!--=============== SKILLS 3 ===============-->
-                        <div class="skills__content skills__close">
-                            <div class="skills__header">
-                                <i class="uil uil-swatchbook skills__icon"></i>
-    
-                                <div>
-                                    <h1 class="skills__title">Database</h1>
-                                    <span class="skills__subtitle">Used in all my web projects</span>
-                                </div>
-    
-                                <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-    
-                            <div class="skills__list grid">
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">MySql</h3>
-                                        <span class="skills__number">90%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__figma"></span>
-                                    </div>
-                                </div>
+                    <i class="uil uil-angle-down skills__arrow"></i>
+                </div>
 
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">MonogoDB</h3>
-                                        <span class="skills__number">85%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__photoshop"></span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">PostgreSQL</h3>
-                                        <span class="skills__number">60%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__photoshop"></span>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="skills__list grid">
+                    <!-- HTML -->
+                    <div class="skills__data">
+                        <div class="skills__titles">
+                            <h3 class="skills__name" data-lang-key="skillsHtml">HTML</h3>
+                            <span class="skills__number">90%</span>
+                        </div>
+                        <div class="skills__bar">
+                            <span class="skills__percentage skills__html"></span>
+                        </div>
+                    </div>
+                    <!-- CSS -->
+                    <div class="skills__data">
+                        <div class="skills__titles">
+                            <h3 class="skills__name" data-lang-key="skillsCss">CSS</h3>
+                            <span class="skills__number">80%</span>
+                        </div>
+                        <div class="skills__bar">
+                            <span class="skills__percentage skills__css"></span>
+                        </div>
+                    </div>
+                    <!-- JavaScript -->
+                    <div class="skills__data">
+                        <div class="skills__titles">
+                            <h3 class="skills__name" data-lang-key="skillsJs">JavaScript</h3>
+                            <span class="skills__number">60%</span>
+                        </div>
+                        <div class="skills__bar">
+                            <span class="skills__percentage skills__js"></span>
+                        </div>
+                    </div>
+                    <!-- ReactJs -->
+                    <div class="skills__data">
+                        <div class="skills__titles">
+                            <h3 class="skills__name" data-lang-key="skillsReactJs">ReactJs</h3>
+                            <span class="skills__number">85%</span>
+                        </div>
+                        <div class="skills__bar">
+                            <span class="skills__percentage skills__react"></span>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <!--==================== QUALIFICATION ====================-->
-            <section class="qualification section" id="qualification">
-                <h2 class="section__title">Qualification</h2>
-                <span class="section__subtitle">My personal journey</span>
+            <!--=============== SKILLS 2 ===============-->
+            <div class="skills__content skills__close">
+                <div class="skills__header">
+                    <i class="uil uil-server-network skills__icon"></i>
 
-                <div class="qualification__container container">
-                    <div class="qualification__tabs">
-                        <div class="qualification__button button--flex qualification__active" data-target="#education">
-                            <i class="uil uil-graduation-cap qualification__icon"></i>
-                            Education
-                        </div>
-
-                        <div class="qualification__button button--flex" data-target="#work">
-                            <i class="uil uil-briefcase-alt qualification__icon"></i>
-                            Work
-                        </div>                      
+                    <div>
+                        <h1 class="skills__title" data-lang-key="skills2Title">Backend developer</h1>
+                        <span class="skills__subtitle" data-lang-key="skills2Subtitle">Full-Stack</span>
                     </div>
 
-                    <div class="qualification__sections" >
-                        <!--=============== QUALIFICATION CONTENT 1 ===============-->
-                        <div class="qualification__content qualification__active" data-content id="education">
-                            <!--=============== QUALIFICATION 1 ===============-->
-                            <div class="qualification__data">
-                                <div>
-                                    <h3 class="qualification__title">Champlain College</h3>
-                                    <span class="qualification__subtitle">Computer Science DEC</span>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        2020 - 2024
-                                    </div>
-                                </div>
-    
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                            </div>
-                            
-                            <!--=============== QUALIFICATION 2 ===============-->
-                            <div class="qualification__data">                                 
-                                <div></div>
+                    <i class="uil uil-angle-down skills__arrow"></i>
+                </div>
 
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                          
-                                <div>
-                                    <h3 class="qualification__title">College Charles-Lemoyne</h3>
-                                    <span class="qualification__subtitle">High-School Diploma</span>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        2014 - 2019
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <!--=============== QUALIFICATION 3 ===============-->
-                            <div class="qualification__data" style="display: none;">
-                                <div>
-                                    <h3 class="qualification__title">Web Development</h3>
-                                    <span class="qualification__subtitle">Peru - Institute</span>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        2017 - 2019
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                            </div>
-
-                            <!--=============== QUALIFICATION 4 ===============-->
-                            <div class="qualification__data " style="display: none;">
-                                <div></div>
-
-                                <div class="qualification__time">
-                                    <span class="qualification__rounder"></span>
-                                    <!-- <span class="qualification__line"></span> -->
-                                </div>
-
-                                <div>
-                                    <h3 class="qualification__title">Master in Ui/Ux</h3>
-                                    <span class="qualification__subtitle">Peru - Institute</span>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        2019 - 2021
-                                    </div>
-                                </div>
-                            </div>
+                <div class="skills__list grid">
+                    <!-- JAVA -->
+                    <div class="skills__data">
+                        <div class="skills__titles">
+                            <h3 class="skills__name" data-lang-key="skillsJava">JAVA</h3>
+                            <span class="skills__number">100%</span>
                         </div>
-
-
-
-                        <!--=============== QUALIFICATION CONTENT 2 ===============-->
-                        <div class="qualification__content" data-content id="work">
-                            <!--=============== QUALIFICATION 1 ===============-->
-                            <div class="qualification__data">
-                                <div>
-                                    <h3 class="qualification__title">Full-Stack Developer</h3>
-                                    <span class="qualification__subtitle">Systèmes Santé ACL Inc.</span>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        2024-2024
-                                    </div>
-                                </div>
-    
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                            </div>
-                            
-                            <!--=============== QUALIFICATION 2 ===============-->
-                            <div class="qualification__data">
-                                <div></div>
-    
-                                <div class="qualification__time">
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-
-                                <div>
-                                    <h3 class="qualification__title">Customer Service Representative</h3>
-                                    <span class="qualification__subtitle">Couche-Tard</span>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        2023-2024
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="qualification__data">
-                                <div>
-                                    <h3 class="qualification__title">Building Material Sales associate</h3>
-                                    <span class="qualification__subtitle">Renot-Depot</span>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        2021-2023
-                                    </div>
-                                </div>
-    
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <!-- <span class="qualification__line"></span> -->
-                                </div>
-                            </div>
+                        <div class="skills__bar">
+                            <span class="skills__percentage skills__php"></span>
+                        </div>
+                    </div>
+                    <!-- Python -->
+                    <div class="skills__data">
+                        <div class="skills__titles">
+                            <h3 class="skills__name" data-lang-key="skillsPython">Python</h3>
+                            <span class="skills__number">60%</span>
+                        </div>
+                        <div class="skills__bar">
+                            <span class="skills__percentage skills__firebase"></span>
+                        </div>
+                    </div>
+                    <!-- Spring Boot -->
+                    <div class="skills__data">
+                        <div class="skills__titles">
+                            <h3 class="skills__name" data-lang-key="skillsSpringBoot">Spring Boot</h3>
+                            <span class="skills__number">95%</span>
+                        </div>
+                        <div class="skills__bar">
+                            <span class="skills__percentage skills__firebase"></span>
+                        </div>
+                    </div>
+                    <!-- Swift -->
+                    <div class="skills__data">
+                        <div class="skills__titles">
+                            <h3 class="skills__name" data-lang-key="skillsSwift">Swift</h3>
+                            <span class="skills__number">70%</span>
+                        </div>
+                        <div class="skills__bar">
+                            <span class="skills__percentage skills__python"></span>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
 
+        <div>
+            <!--=============== SKILLS 3 ===============-->
+            <div class="skills__content skills__close">
+                <div class="skills__header">
+                    <i class="uil uil-swatchbook skills__icon"></i>
+
+                    <div>
+                        <h1 class="skills__title" data-lang-key="skills3Title">Database</h1>
+                        <span class="skills__subtitle" data-lang-key="skills3Subtitle">Used in all my web projects</span>
+                    </div>
+
+                    <i class="uil uil-angle-down skills__arrow"></i>
+                </div>
+
+                <div class="skills__list grid">
+                    <!-- MySql -->
+                    <div class="skills__data">
+                        <div class="skills__titles">
+                            <h3 class="skills__name" data-lang-key="skillsMySql">MySql</h3>
+                            <span class="skills__number">90%</span>
+                        </div>
+                        <div class="skills__bar">
+                            <span class="skills__percentage skills__figma"></span>
+                        </div>
+                    </div>
+                    <!-- MongoDB -->
+                    <div class="skills__data">
+                        <div class="skills__titles">
+                            <h3 class="skills__name" data-lang-key="skillsMongoDB">MonogoDB</h3>
+                            <span class="skills__number">85%</span>
+                        </div>
+                        <div class="skills__bar">
+                            <span class="skills__percentage skills__photoshop"></span>
+                        </div>
+                    </div>
+                    <!-- PostgreSQL -->
+                    <div class="skills__data">
+                        <div class="skills__titles">
+                            <h3 class="skills__name" data-lang-key="skillsPostgreSQL">PostgreSQL</h3>
+                            <span class="skills__number">60%</span>
+                        </div>
+                        <div class="skills__bar">
+                            <span the skills__percentage skills__photoshop"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+          <!--==================== QUALIFICATION ====================-->
+<section class="qualification section" id="qualifications">
+    <h2 class="section__title" data-lang-key="qualificationTitle">Qualification</h2>
+    <span class="section__subtitle" data-lang-key="qualificationSubtitle">My personal journey</span>
+    <div class="qualification__container container">
+        <div class="qualification__tabs">
+            <div class="qualification__button button--flex qualification__active" data-target="#education" data-lang-key="qualificationEducationTab">
+                <i class="uil uil-graduation-cap qualification__icon"></i>Education
+            </div>
+            <div class="qualification__button button--flex" data-target="#work" data-lang-key="qualificationWorkTab">
+                <i class="uil uil-briefcase-alt qualification__icon"></i>Work
+            </div>
+        </div>
+        <div class="qualification__sections">
+            <!--=============== QUALIFICATION CONTENT 1 ===============-->
+            <div class="qualification__content qualification__active" data-content id="education">
+                <!--=============== QUALIFICATION 1 ===============-->
+                <div class="qualification__data">
+                    <div>
+                        <h3 class="qualification__title" data-lang-key="qualification1Title">Champlain College</h3>
+                        <span class="qualification__subtitle" data-lang-key="qualification1Subtitle">Computer Science DEC</span>
+                        <div class="qualification__calendar"><i class="uil uil-calendar-alt"></i>2020 - 2024</div>
+                    </div>
+                    <div>
+                        <span class="qualification__rounder"></span>
+                        <span class="qualification__line"></span>
+                    </div>
+                </div>
+                <!--=============== QUALIFICATION 2 ===============-->
+                <div class="qualification__data">
+                    <div></div>
+                    <div>
+                        <span class="qualification__rounder"></span>
+                        <span class="qualification__line"></span>
+                    </div>
+                    <div>
+                        <h3 class="qualification__title" data-lang-key="qualification2Title">College Charles-Lemoyne</h3>
+                        <span class="qualification__subtitle" data-lang-key="qualification2Subtitle">High-School Diploma</span>
+                        <div class="qualification__calendar"><i class="uil uil-calendar-alt"></i>2014 - 2019</div>
+                    </div>
+                </div>
+                <!--=============== QUALIFICATION 3 ===============-->
+                <div class="qualification__data" style="display: none;">
+                    <div>
+                        <h3 class="qualification__title" data-lang-key="qualification3Title">Web Development</h3>
+                        <span class="qualification__subtitle" data-lang-key="qualification3Subtitle">Peru - Institute</span>
+                        <div class="qualification__calendar"><i class="uil uil-calendar-alt"></i>2017 - 2019</div>
+                    </div>
+                    <div>
+                        <span class="qualification__rounder"></span>
+                        <span class="qualification__line"></span>
+                    </div>
+                </div>
+                <!--=============== QUALIFICATION 4 ===============-->
+                <div class="qualification__data" style="display: none;">
+                    <div></div>
+                    <div class="qualification__time">
+                        <span class="qualification__rounder"></span>
+                    </div>
+                    <div>
+                        <h3 class="qualification__title" data-lang-key="qualification4Title">Master in Ui/Ux</h3>
+                        <span class="qualification__subtitle" data-lang-key="qualification4Subtitle">Peru - Institute</span>
+                        <div class="qualification__calendar"><i class="uil uil-calendar-alt"></i>2019 - 2021</div>
+                    </div>
+                </div>
+            </div>
+            <!--=============== QUALIFICATION CONTENT 2 ===============-->
+            <div class="qualification__content" data-content id="work">
+                <!--=============== QUALIFICATION 1 ===============-->
+                <div class="qualification__data">
+                    <div>
+                        <h3 class="qualification__title" data-lang-key="qualificationWork1Title">Full-Stack Developer</h3>
+                        <span class="qualification__subtitle" data-lang-key="qualificationWork1Subtitle">Systèmes Santé ACL Inc.</span>
+                        <div class="qualification__calendar"><i class="uil uil-calendar-alt"></i>2024-2024</div>
+                    </div>
+                    <div>
+                        <span class="qualification__rounder"></span>
+                        <span class="qualification__line"></span>
+                    </div>
+                </div>
+                <!--=============== QUALIFICATION 2 ===============-->
+                <div class="qualification__data">
+                    <div></div>
+                    <div class="qualification__time">
+                        <span class="qualification__rounder"></span>
+                        <span class="qualification__line"></span>
+                    </div>
+                    <div>
+                        <h3 class="qualification__title" data-lang-key="qualificationWork2Title">Customer Service Representative</h3>
+                        <span class="qualification__subtitle" data-lang-key="qualificationWork2Subtitle">Couche-Tard</span>
+                        <div class="qualification__calendar"><i class="uil uil-calendar-alt"></i>2023-2024</div>
+                    </div>
+                </div>
+                <div class="qualification__data">
+                    <div>
+                        <h3 class="qualification__title" data-lang-key="qualificationWork3Title">Building Material Sales associate</h3>
+                        <span class="qualification__subtitle" data-lang-key="qualificationWork3Subtitle">Renot-Depot</span>
+                        <div class="qualification__calendar"><i class="uil uil-calendar-alt"></i>2021-2023</div>
+                    </div>
+                    <div>
+                        <span class="qualification__rounder"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
             <!--==================== PORTFOLIO ====================-->
-            <section class="portfolio section" id="portfolio">
-                <h2 class="section__title">Portfolio</h2>
-                <span class="section__subtitle">Most recent work</span>
+<section class="portfolio section" id="portfolio">
+    <h2 class="section__title" data-lang-key="portfolioTitle">Portfolio</h2>
+    <span class="section__subtitle" data-lang-key="portfolioSubtitle">Most recent work</span>
 
-                <div class="portfolio__container container swiper-container">
-                    <div class="swiper-wrapper">
-                        <!--=============== PORTFOLIO 1 ===============-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/fitw.png" alt="" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">FitWSarah</h3>
-                                <p class="portfolio__description">Personal fitness trainer website for an external client Sarah. I worked on this website in a team of 4 people.</p>
-                                <a href="https://github.com/AlexeiTimbro/FitWSarah" class="button button--flex button--small portfolio__button" target="_blank">
-                                    Github Repository
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                                <a href="https://fitwsarah-tm3c.onrender.com/" class="button button--flex button--small portfolio__button" style="margin-top: 10px" target="_blank">
-                                    Deployment
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-    
-                        <!--=============== PORTFOLIO 2 ===============-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/swiftapp.jpg" alt="" class="portfolio__img">
-    
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Bano Auto</h3>
-                                <p class="portfolio__description">IOS Swift UI MVVM Application for a Car Dealership Dealer working for the Bano Auto company</p>
-                                <a href="https://github.com/AlexeiTimbro" class="button button--flex button--small portfolio__button" target="_blank">
-                                    Github Repository
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-    
-                        <!--=============== PORTFOLIO 3 ===============-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/unity.png" alt="" class="portfolio__img">
-    
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Bus Bellos</h3>
-                                <p class="portfolio__description">Unity bus boy game that me and my friends made for our final project. Really fun game.</p>
-                                <a href="https://github.com/AlexeiTimbro/BusBellos" class="button button--flex button--small portfolio__button" target="_blank">
-                                    Github Repository
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-button-next">
-                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                    </div>
-                    <div class="swiper-button-prev">
-                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                    </div>
-
-                    <div class="swiper-pagination"></div>
+    <div class="portfolio__container container swiper-container">
+        <div class="swiper-wrapper">
+            <!--=============== PORTFOLIO 1 ===============-->
+            <div class="portfolio__content grid swiper-slide">
+                <img src="assets/img/fitw.png" alt="FitWSarah project image" class="portfolio__img">
+                <div class="portfolio__data">
+                    <h3 class="portfolio__title" data-lang-key="portfolio1Title">FitWSarah</h3>
+                    <p class="portfolio__description" data-lang-key="portfolio1Description">Personal fitness trainer website for an external client Sarah. I worked on this website in a team of 4 people.</p>
+                    <a href="https://github.com/AlexeiTimbro/FitWSarah" class="button button--flex button--small portfolio__button" target="_blank" data-lang-key="portfolio1Github">Github Repository<i class="uil uil-arrow-right button__icon"></i></a>
+                    <a href="https://fitwsarah-tm3c.onrender.com/" class="button button--flex button--small portfolio__button" style="margin-top: 10px" target="_blank" data-lang-key="portfolio1Deployment">Deployment<i class="uil uil-arrow-right button__icon"></i></a>
                 </div>
-            </section>
+            </div>
 
+            <!--=============== PORTFOLIO 2 ===============-->
+            <div class="portfolio__content grid swiper-slide">
+                <img src="assets/img/swiftapp.jpg" alt="Bano Auto project image" class="portfolio__img">
+                <div class="portfolio__data">
+                    <h3 class="portfolio__title" data-lang-key="portfolio2Title">Bano Auto</h3>
+                    <p class="portfolio__description" data-lang-key="portfolio2Description">IOS Swift UI MVVM Application for a Car Dealership Dealer working for the Bano Auto company</p>
+                    <a href="https://github.com/AlexeiTimbro" class="button button--flex button--small portfolio__button" target="_blank" data-lang-key="portfolio2Github">Github Repository<i class="uil uil-arrow-right button__icon"></i></a>
+                </div>
+            </div>
 
+            <!--=============== PORTFOLIO 3 ===============-->
+            <div class="portfolio__content grid swiper-slide">
+                <img src="assets/img/unity.png" alt="Bus Bellos project image" class="portfolio__img">
+                <div class="portfolio__data">
+                    <h3 class="portfolio__title" data-lang-key="portfolio3Title">Bus Bellos</h3>
+                    <p class="portfolio__description" data-lang-key="portfolio3Description">Unity bus boy game that me and my friends made for our final project. Really fun game.</p>
+                    <a href="https://github.com/AlexeiTimbro/BusBellos" class="button button--flex button--small portfolio__button" target="_blank" data-lang-key="portfolio3Github">Github Repository<i class="uil uil-arrow-right button__icon"></i></a>
+                </div>
+            </div>
+        </div>
 
-            <!--==================== TESTIMONIAL ====================-->
-            <section class="testimonial section">
-                <h2 class="section__title">Testimonial</h2>
-                <span class="section__subtitle">My classmates saying</span>
+        <div class="swiper-button-next">
+            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+        </div>
+        <div class="swiper-button-prev">
+            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+        </div>
 
-                <div class="testimonial__container container swiper-container">
-                    <div class="swiper-wrapper">
-                        <!--=============== TESTIMONIAL 1 ===============-->
-                        <div class="testimonial__content swiper-slide">
-                            <div class="testimonial__data">
-                                <div class="testimonial__header">
-                                    <img src="assets/img/giuliano.jpg" alt="" class="testimonial__img">
-        
-                                    <div>
-                                        <h3 class="testimonial__name">Giuliano Iantomasi</h3>
-                                        <span class="testimonial__client">Classmate</span>
-                                    </div>
-                                </div>
-    
-                                <div>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                </div>
-                            </div>
-    
-                            <p class="testimonial__description">Alexei is a very hardworking and dedicated individual. He is always willing to help others and is a great team player. He is very knowledgeable and has a great understanding of programming and software development. He is always willing to learn and is very open to new ideas and concepts. He is a great asset to any team and I would highly recommend him.</p>
-                            </p>
-                        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+<!--==================== TESTIMONIAL ====================-->
+<section class="testimonial section">
+    <h2 class="section__title" data-lang-key="testimonialTitle">Testimonial</h2>
+    <span class="section__subtitle" data-lang-key="testimonialSubtitle">My classmates saying</span>
 
-                        <!--=============== TESTIMONIAL 2 ===============-->
-                        <div class="testimonial__content swiper-slide">
-                            <div class="testimonial__data">
-                                <div class="testimonial__header">
-                                    <img src="assets/img/josh.jpg" alt="" class="testimonial__img">
-
-                                    <div>
-                                        <h3 class="testimonial__name">Joshua Wallace</h3>
-                                        <span class="testimonial__client">Classmate</span>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                </div>
-                            </div>
-
-                            <p class="testimonial__description">Such a pleasure to work with, incredibly goal orientated and hard working.A clear passion in computer science, an absolute professional in both Java and business. Would recommend his services to anybody.
-                            </p>
-                        </div>
-    
-                        <!--=============== TESTIMONIAL 3 ===============-->
-                        <div class="testimonial__content swiper-slide">
-                            <div class="testimonial__data">
-                                <div class="testimonial__header">
-                                    <img src="assets/img/abdur.png" alt="" class="testimonial__img">
-        
-                                    <div>
-                                        <h3 class="testimonial__name">Abdur Siddiqui</h3>
-                                        <span class="testimonial__client">Classmate</span>
-                                    </div>
-                                </div>
-    
-                                <div>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                </div>
-                            </div>
-                            <!-- write a different paragraph for this one-->
-
-                            <p class="testimonial__description">
-                                Working with him was a pleasure; he's goal-oriented, diligent, and passionate about computer science, excelling in Java and business. Highly recommend his services.
-                            </p>
-                        </div>
-    
-                        <!--=============== TESTIMONIAL 4 ===============-->
-                        <div class="testimonial__content swiper-slide">
-                            <div class="testimonial__data">
-                                <div class="testimonial__header">
-                                    <img src="assets/img/elias.png" alt="" class="testimonial__img">
-        
-                                    <div>
-                                        <h3 class="testimonial__name">Elias Elamine</h3>
-                                        <span class="testimonial__client">Classmate</span>
-                                    </div>
-                                </div>
-    
-                                <div>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                    <i class="uil uil-star testimonial__icon-star"></i>
-                                </div>
-                            </div>
-    
-                            <p class="testimonial__description">Collaborating with him was a great experience; he's highly goal-driven and diligent, with a real passion for computer science. His professionalism in Java and business is exceptional. I highly recommend his services.
-                            </p>
+    <div class="testimonial__container container swiper-container">
+        <div class="swiper-wrapper">
+            <!--=============== TESTIMONIAL 1 ===============-->
+            <div class="testimonial__content swiper-slide">
+                <div class="testimonial__data">
+                    <div class="testimonial__header">
+                        <img src="assets/img/giuliano.jpg" alt="Giuliano Iantomasi" class="testimonial__img">
+                        <div>
+                            <h3 class="testimonial__name" data-lang-key="testimonial1Name">Giuliano Iantomasi</h3>
+                            <span class="testimonial__client" data-lang-key="testimonial1Client">Classmate</span>
                         </div>
                     </div>
-                    <div class="swiper-pagination swiper-pagination-testimonial"></div>
+                    <div>
+                        <i class="uil uil-star testimonial__icon-star"></i>
+                        <i class="uil uil-star testimonial__icon-star"></i>
+                        <i class="uil uil-star testimonial__icon-star"></i>
+                        <i class="uil uil-star testimonial__icon-star"></i>
+                        <i class="uil uil-star testimonial__icon-star"></i>
+                    </div>
                 </div>
-            </section>
+                <p class="testimonial__description" data-lang-key="testimonial1Description">Alexei is a very hardworking and dedicated individual. He is always willing to help others and is a great team player. He is very knowledgeable and has a great understanding of programming and software development. He is always willing to learn and is very open to new ideas and concepts. He is a great asset to any team and I would highly recommend him.</p>
+            </div>
+
+            <!--=============== TESTIMONIAL 2 ===============-->
+            <div class="testimonial__content swiper-slide">
+                <div class="testimonial__data">
+                    <div class="testimonial__header">
+                        <img src="assets/img/josh.jpg" alt="Joshua Wallace" class="testimonial__img">
+                        <div>
+                            <h3 class="testimonial__name" data-lang-key="testimonial2Name">Joshua Wallace</h3>
+                            <span class="testimonial__client" data-lang-key="testimonial2Client">Classmate</span>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="uil uil-star testimonial__icon-star"></i>
+                        <i class="uil uil-star testimonial__icon-star"></i>
+                        <i class="uil uil-star testimonial__icon-star"></i>
+                        <i class="uil uil-star testimonial__icon-star"></i>
+                        <i class="uil uil-star testimonial__icon-star"></i>
+                    </div>
+                </div>
+                <p class="testimonial__description" data-lang-key="testimonial2Description">Such a pleasure to work with, incredibly goal orientated and hard working.A clear passion in computer science, an absolute professional in both Java and business. Would recommend his services to anybody.</p>
+            </div>
+
+            <!--=============== TESTIMONIAL 3 ===============-->
+            <div class="testimonial__content swiper-slide">
+                <div class="testimonial__data">
+                    <div class="testimonial__header">
+                        <img src="assets/img/abdur.png" alt="Abdur Siddiqui" class="testimonial__img">
+                        <div>
+                            <h3 class="testimonial__name" data-lang-key="testimonial3Name">Abdur Siddiqui</h3>
+                            <span class="testimonial__client" data-lang-key="testimonial3Client">Classmate</span>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="uil uil-star testimonial__icon-star"></i>
+                        <i class="uil uil-star testimonial__icon-star"></i>
+                        <i class="uil uil-star testimonial__icon-star"></i>
+                        <i class="uil uil-star testimonial__icon-star"></i>
+                        <i class="uil uil-star testimonial__icon-star"></i>
+                    </div>
+                </div>
+                <p class="testimonial__description" data-lang-key="testimonial3Description">Working with him was a pleasure; he's goal-oriented, diligent, and passionate about computer science, excelling in Java and business. Highly recommend his services.</p>
+            </div>
+
+            <!--=============== TESTIMONIAL 4 ===============-->
+            <div class="testimonial__content swiper-slide">
+                <div class="testimonial__data">
+                    <div class="testimonial__header">
+                        <img src="assets/img/elias.png" alt="Elias Elamine" class="testimonial__img">
+                        <div>
+                            <h3 class="testimonial__name" data-lang-key="testimonial4Name">Elias Elamine</h3>
+                            <span class="testimonial__client" data-lang-key="testimonial4Client">Classmate</span>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="uil uil-star testimonial__icon-star"></i>
+                        <i class="uil uil-star testimonial__icon-star"></i>
+                        <i class="uil uil-star testimonial__icon-star"></i>
+                        <i class="uil uil-star testimonial__icon-star"></i>
+                        <i class="uil uil-star testimonial__icon-star"></i>
+                    </div>
+                </div>
+                <p class="testimonial__description" data-lang-key="testimonial4Description">Collaborating with him was a great experience; he's highly goal-driven and diligent, with a real passion for computer science. His professionalism in Java and business is exceptional. I highly recommend his services.</p>
+            </div>
+        </div>
+        <div class="swiper-pagination swiper-pagination-testimonial"></div>
+    </div>
+</section>
 
             <!--==================== CONTACT ME ====================-->
-            <section class="contact section" id="contact">
-                <h2 class="section__title">Contact Me</h2>
-                <span class="section__subtitle">Get in touch</span>
+<section class="contact section" id="contact">
+    <h2 class="section__title" data-lang-key="contactTitle">Contact Me</h2>
+    <span class="section__subtitle" data-lang-key="contactSubtitle">Get in touch</span>
 
-                <div class="contact__container container grid">
-                    <div>
-                        <div class="contact__information">
-                            <i class="uil uil-phone contact__icon"></i>
-                            <div>
-                                <h3 class="contact__title">Call Me</h3>
-                                <span class="contact__subtitle">514-984-0652</span>
-                            </div>
-                        </div>
-
-                        <div class="contact__information">
-                            <i class="uil uil-envelope contact__icon"></i>
-                            <div>
-                                <h3 class="contact__title">Email</h3>
-                                <span class="contact__subtitle">alexei.timbro@email.com</span>
-                            </div>
-                        </div>
-
-                        <div class="contact__information">
-                            <i class="uil uil-map-marker contact__icon"></i>
-                            <div>
-                                <h3 class="contact__title">Location</h3>
-                                <span class="contact__subtitle">Canada, Montreal - 1002 Sherbrooke St W</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <form action="" class="contact__form grid">
-                        <div class="contact__inputs grid">
-                            <div class="contact__content">
-                                <label for="" class="contact__label">Name</label>
-                                <input type="text" class="contact__input">
-                            </div>
-                            <div class="contact__content">
-                                <label for="" class="contact__label">Email</label>
-                                <input type="email" class="contact__input">
-                            </div>
-                        </div>
-                        <div class="contact__content">
-                            <label for="" class="contact__label">Project</label>
-                            <input type="text" class="contact__input">
-                        </div>
-                        <div class="contact__content">
-                            <label for="" class="contact__label">Message</label>
-                            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
-                        </div>
-                        
-                        <div>
-                            <a href="#" class="button button--flex">
-                                Send Message
-                                <i class="uil uil-message button__icon"></i>
-                            </a>
-                        </div>
-                    </form>
+    <div class="contact__container container grid">
+        <div>
+            <div class="contact__information">
+                <i class="uil uil-phone contact__icon"></i>
+                <div>
+                    <h3 class="contact__title" data-lang-key="contactPhoneTitle">Call Me</h3>
+                    <span class="contact__subtitle" data-lang-key="contactPhoneNumber">514-984-0652</span>
                 </div>
+            </div>
 
-            </section>
+            <div class="contact__information">
+                <i class="uil uil-envelope contact__icon"></i>
+                <div>
+                    <h3 class="contact__title" data-lang-key="contactEmailTitle">Email</h3>
+                    <span class="contact__subtitle" data-lang-key="contactEmailAddress">alexei.timbro@email.com</span>
+                </div>
+            </div>
+
+            <div class="contact__information">
+                <i class="uil uil-map-marker contact__icon"></i>
+                <div>
+                    <h3 class="contact__title" data-lang-key="contactLocationTitle">Location</h3>
+                    <span class="contact__subtitle" data-lang-key="contactLocationDetails">Canada, Montreal - 1002 Sherbrooke St W</span>
+                </div>
+            </div>
+        </div>
+
+        <form action="" class="contact__form grid">
+            <div class="contact__inputs grid">
+                <div class="contact__content">
+                    <label for="" class="contact__label" data-lang-key="contactNameLabel">Name</label>
+                    <input type="text" class="contact__input">
+                </div>
+                <div class="contact__content">
+                    <label for="" class="contact__label" data-lang-key="contactEmailLabel">Email</label>
+                    <input type="email" class="contact__input">
+                </div>
+            </div>
+            <div class="contact__content">
+                <label for="" class="contact__label" data-lang-key="contactProjectLabel">Project</label>
+                <input type="text" class="contact__input">
+            </div>
+            <div class="contact__content">
+                <label for="" class="contact__label" data-lang-key="contactMessageLabel">Message</label>
+                <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+            </div>
+            
+            <div>
+                <a href="#" class="button button--flex" data-lang-key="contactSendMessageButton">
+                    Send Message
+                    <i class="uil uil-message button__icon"></i>
+                </a>
+            </div>
+        </form>
+    </div>
+</section>
+
         </main>
 
         <!--==================== FOOTER ====================-->
-        <footer class="footer">
-            <div class="footer__bg">
-                <div class="footer__container container grid">
-                    <div>
-                        <h1 class="footer__title">Alexei</h1>
-                        <span class="footer__subtitle">Full-Stack Developer</span>
-                    </div>
-
-                    <ul class="footer__links">
-                        <li>
-                            <a href="#qualification" class="footer__link">Qualifications</a>
-                        </li>
-                        <li>
-                            <a href="#portfolio" class="footer__link">Portfolio</a>
-                        </li>
-                        <li>
-                            <a href="#contact" class="footer__link">Contact</a>
-                        </li>
-                    </ul>
-
-                    <div class="footer__socials">
-                        <a href="https://www.linkedin.com/in/alexei-timbro/" target="_blank" class="footer__social">
-                            <i class="uil uil-linkedin-alt"></i>
-                        </a>
-
-                        <a href="https://github.com/AlexeiTimbro" target="_blank" class="footer__social">
-                            <i class="uil uil-github-alt"></i>
-                        </a>
-                    </div>
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Alexei</h1>
+                    <span class="footer__subtitle">Full-Stack Developer</span>
                 </div>
 
-                <p class="footer__copy">&#169; Alexei Timbro. All right reserved</p>
+                <ul class="footer__links">
+                    <li>
+                        <a href="#qualifications" class="footer__link" data-lang-key="qualifications">Qualifications</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="footer__link" data-lang-key="portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link" data-lang-key="contact">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#footer" id="lang-toggle" class="footer__link">Francais</a>
+
+                    </li>
+                    
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="https://www.linkedin.com/in/alexei-timbro/" target="_blank" class="footer__social">
+                        <i class="uil uil-linkedin-alt"></i>
+                    </a>
+
+                    <a href="https://github.com/AlexeiTimbro" target="_blank" class="footer__social">
+                        <i class="uil uil-github-alt"></i>
+                    </a>
+                </div>
             </div>
-        </footer>
 
-        <!--========== SCROLL TOP ==========-->
-        <a href="#" class="scrollup" id="scroll-top">
-            <i class="uil uil-arrow-up scrollup__icon"></i>
-        </a>
+            <p class="footer__copy" data-lang-key="rights">&#169; Alexei Timbro. All rights reserved</p>
+        </div>
+    </footer>
 
-        <!--==================== SWIPER JS ====================-->
-        <script src="assets/js/swiper-bundle.min.js"></script>
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrollup" id="scroll-top">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
 
-        <!--==================== MAIN JS ====================-->
-        <script src="assets/js/main.js"></script>
-    </body>
+    <!--==================== SWIPER JS ====================-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--==================== MAIN JS ====================-->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Language Toggle Script -->
+    <script>
+        const langData = {
+            en: {
+                home: "Home",
+                about: "About",
+                skills: "Skills",
+                qualifications: "Qualifications",
+                portfolio: "Portfolio",
+                contact: "Contact Me",
+                rights: "© Alexei Timbro. All rights reserved",
+                home_title: "Hi, I'm Alexei",
+                home_subtitle: "Full-Stack Developer",
+                home_description: "Third-year Computer Science student at Champlain College with expertise in full-stack development.",
+                home_cv_button: "My CV",
+                home_scroll: "Scroll down",
+                about_title: "About Me",
+                about_subtitle: "My introduction",
+                about_description: "Full-Stack web developer, with extensive knowledge and a passion for technologies, working out, cars and an exquisite fashion sense.",
+                about_experience_years: "03+",
+                about_experience: "Years experience",
+                about_projects_completed: "08+",
+                about_projects: "Completed projects",
+                about_companies_worked: "01+",
+                about_companies: "Companies worked",
+                about_download_cv: "Download CV",
+                skillsTitle: "Skills",
+                skillsSubtitle: "My technical level",
+                skills1Title: "Frontend developer",
+                skills1Subtitle: "Full-Stack",
+                skillsHtml: "HTML",
+                skillsCss: "CSS",
+                skillsJs: "JavaScript",
+                skillsReactJs: "ReactJs",
+                skills2Title: "Backend developer",
+                skills2Subtitle: "Full-Stack",
+                skillsJava: "JAVA",
+                skillsPython: "Python",
+                skillsSpringBoot: "Spring Boot",
+                skillsSwift: "Swift",
+                skills3Title: "Database",
+                skills3Subtitle: "Used in all my web projects",
+                skillsMySql: "MySql",
+                skillsMongoDB: "MongoDB",
+                skillsPostgreSQL: "PostgreSQL",
+                qualificationTitle: "Qualification",
+                qualificationSubtitle: "My personal journey",
+                qualificationEducationTab: "Education",
+                qualificationWorkTab: "Work",
+                qualification1Title: "Champlain College",
+                qualification1Subtitle: "Computer Science DEC",
+                qualification2Title: "College Charles-Lemoyne",
+                qualification2Subtitle: "High-School Diploma",
+                qualification3Title: "Web Development",
+                qualification3Subtitle: "Peru - Institute",
+                qualification4Title: "Master in Ui/Ux",
+                qualification4Subtitle: "Peru - Institute",
+                qualificationWork1Title: "Full-Stack Developer",
+                qualificationWork1Subtitle: "Systèmes Santé ACL Inc.",
+                qualificationWork2Title: "Customer Service Representative",
+                qualificationWork2Subtitle: "Couche-Tard",
+                qualificationWork3Title: "Building Material Sales associate",
+                qualificationWork3Subtitle: "Renot-Depot",
+                portfolioTitle: "Portfolio",
+                portfolioSubtitle: "Most recent work",
+                portfolio1Title: "FitWSarah",
+                portfolio1Description: "Personal fitness trainer website for an external client Sarah. I worked on this website in a team of 4 people.",
+                portfolio1Github: "Github Repository",
+                portfolio1Deployment: "Deployment",
+                portfolio2Title: "Bano Auto",
+                portfolio2Description: "IOS Swift UI MVVM Application for a Car Dealership Dealer working for the Bano Auto company",
+                portfolio2Github: "Github Repository",
+                portfolio3Title: "Bus Bellos",
+                portfolio3Description: "Unity bus boy game that me and my friends made for our final project. Really fun game.",
+                portfolio3Github: "Github Repository",
+                testimonialTitle: "Testimonial",
+                testimonialSubtitle: "My classmates saying",
+                testimonial1Name: "Giuliano Iantomasi",
+                testimonial1Client: "Classmate",
+                testimonial1Description: "Alexei is a very hardworking and dedicated individual. He is always willing to help others and is a great team player. He is very knowledgeable and has a great understanding of programming and software development. He is always willing to learn and is very open to new ideas and concepts. He is a great asset to any team and I would highly recommend him.",
+                testimonial2Name: "Joshua Wallace",
+                testimonial2Client: "Classmate",
+                testimonial2Description: "Such a pleasure to work with, incredibly goal orientated and hard working. A clear passion in computer science, an absolute professional in both Java and business. Would recommend his services to anybody.",
+                testimonial3Name: "Abdur Siddiqui",
+                testimonial3Client: "Classmate",
+                testimonial3Description: "Working with him was a pleasure; he's goal-oriented, diligent, and passionate about computer science, excelling in Java and business. Highly recommend his services.",
+                testimonial4Name: "Elias Elamine",
+                testimonial4Client: "Classmate",
+                testimonial4Description: "Collaborating with him was a great experience; he's highly goal-driven and diligent, with a real passion for computer science. His professionalism in Java and business is exceptional. I highly recommend his services.",
+                contactTitle: "Contact Me",
+                contactSubtitle: "Get in touch",
+                contactPhoneTitle: "Call Me",
+                contactPhoneNumber: "514-984-0652",
+                contactEmailTitle: "Email",
+                contactEmailAddress: "alexei.timbro@email.com",
+                contactLocationTitle: "Location",
+                contactLocationDetails: "Canada, Montreal - 1002 Sherbrooke St W",
+                contactNameLabel: "Name",
+                contactEmailLabel: "Email",
+                contactProjectLabel: "Project",
+                contactMessageLabel: "Message",
+                contactSendMessageButton: "Send Message"
+            },
+            fr: {
+                home: "Accueil",
+                about: "À propos",
+                skills: "Compétences",
+                qualifications: "Qualifications",
+                portfolio: "Portefeuille",
+                contact: "Contactez Moi",
+                rights: "© Alexei Timbro. Tous droits réservés",
+                home_title: "Salut, je suis Alexei",
+                home_subtitle: "Développeur Full-Stack",
+                home_description: "Étudiant en troisième année en informatique au Collège Champlain avec une expertise en développement full-stack.",
+                home_cv_button: "Mon CV",
+                home_scroll: "Faites défiler vers le bas",
+                about_title: "À propos de moi",
+                about_subtitle: "Mon introduction",
+                about_description: "Développeur web Full-Stack, avec une connaissance approfondie et une passion pour les technologies, le sport, les voitures et un sens de la mode exquis.",
+                about_experience_years: "03+",
+                about_experience: "Années d'expérience",
+                about_projects_completed: "08+",
+                about_projects: "Projets terminés",
+                about_companies_worked: "01+",
+                about_companies: "Entreprises travaillées",
+                about_download_cv: "Télécharger CV",
+                skillsTitle: "Compétences",
+                skillsSubtitle: "Mon niveau technique",
+                skills1Title: "Développeur Frontend",
+                skills1Subtitle: "Full-Stack",
+                skillsHtml: "HTML",
+                skillsCss: "CSS",
+                skillsJs: "JavaScript",
+                skillsReactJs: "ReactJs",
+                skills2Title: "Développeur Backend",
+                skills2Subtitle: "Full-Stack",
+                skillsJava: "JAVA",
+                skillsPython: "Python",
+                skillsSpringBoot: "Spring Boot",
+                skillsSwift: "Swift",
+                skills3Title: "Base de données",
+                skills3Subtitle: "Utilisé dans tous mes projets web",
+                skillsMySql: "MySql",
+                skillsMongoDB: "MongoDB",
+                skillsPostgreSQL: "PostgreSQL",
+                qualificationTitle: "Qualifications",
+                qualificationSubtitle: "Mon parcours personnel",
+                qualificationEducationTab: "Éducation",
+                qualificationWorkTab: "Travail",
+                qualification1Title: "Collège Champlain",
+                qualification1Subtitle: "DEC en informatique",
+                qualification2Title: "Collège Charles-Lemoyne",
+                qualification2Subtitle: "Diplôme d'études secondaires",
+                qualification3Title: "Développement Web",
+                qualification3Subtitle: "Institut - Pérou",
+                qualification4Title: "Maîtrise en Ui/Ux",
+                qualification4Subtitle: "Institut - Pérou",
+                qualificationWork1Title: "Développeur Full-Stack",
+                qualificationWork1Subtitle: "Systèmes Santé ACL Inc.",
+                qualificationWork2Title: "Représentant du Service Clientèle",
+                qualificationWork2Subtitle: "Couche-Tard",
+                qualificationWork3Title: "Associé aux Ventes de Matériaux de Construction",
+                qualificationWork3Subtitle: "Renot-Depot",
+                portfolioTitle: "Portefeuille",
+                portfolioSubtitle: "Travaux les plus récents",
+                portfolio1Title: "FitWSarah",
+                portfolio1Description: "Site web de coach de fitness personnel pour un client externe, Sarah. J'ai travaillé sur ce site dans une équipe de 4 personnes.",
+                portfolio1Github: "Dépôt Github",
+                portfolio1Deployment: "Déploiement",
+                portfolio2Title: "Bano Auto",
+                portfolio2Description: "Application MVVM Swift UI pour iOS pour un concessionnaire automobile travaillant pour l'entreprise Bano Auto",
+                portfolio2Github: "Dépôt Github",
+                portfolio3Title: "Bus Bellos",
+                portfolio3Description: "Jeu de garçon de bus Unity que moi et mes amis avons réalisé pour notre projet final. Un jeu vraiment amusant.",
+                portfolio3Github: "Dépôt Github",
+                testimonialTitle: "Témoignages",
+                testimonialSubtitle: "Ce que mes camarades disent",
+                testimonial1Name: "Giuliano Iantomasi",
+                testimonial1Client: "Camarade de classe",
+                testimonial1Description: "Alexei est un individu très travailleur et dévoué. Il est toujours prêt à aider les autres et est un excellent joueur d'équipe. Il possède une grande connaissance et comprend bien la programmation et le développement logiciel. Il est toujours prêt à apprendre et est très ouvert aux nouvelles idées et concepts. Il est un atout majeur pour toute équipe et je le recommanderais vivement.",
+                testimonial2Name: "Joshua Wallace",
+                testimonial2Client: "Camarade de classe",
+                testimonial2Description: "C'est un plaisir de travailler avec lui, incroyablement orienté vers les objectifs et travailleur. Une passion claire pour l'informatique, un professionnel absolu à la fois en Java et en affaires. Je recommanderais ses services à quiconque.",
+                testimonial3Name: "Abdur Siddiqui",
+                testimonial3Client: "Camarade de classe",
+                testimonial3Description: "Travailler avec lui était un plaisir; il est orienté vers les objectifs, diligent et passionné par l'informatique, excellent en Java et en affaires. Je recommande vivement ses services.",
+                testimonial4Name: "Elias Elamine",
+                testimonial4Client: "Camarade de classe",
+                testimonial4Description: "Collaborer avec lui était une excellente expérience; il est très motivé et diligent, avec une véritable passion pour l'informatique. Son professionnalisme en Java et en affaires est exceptionnel. Je recommande vivement ses services.",
+                contactTitle: "Contactez-moi",
+                contactSubtitle: "Prenez contact",
+                contactPhoneTitle: "Appelez-moi",
+                contactPhoneNumber: "514-984-0652",
+                contactEmailTitle: "Email",
+                contactEmailAddress: "alexei.timbro@email.com",
+                contactLocationTitle: "Localisation",
+                contactLocationDetails: "Canada, Montréal - 1002 Sherbrooke St W",
+                contactNameLabel: "Nom",
+                contactEmailLabel: "Email",
+                contactProjectLabel: "Projet",
+                contactMessageLabel: "Message",
+                contactSendMessageButton: "Envoyer le message"
+            }
+        };
+
+        document.getElementById('lang-toggle').addEventListener('click', function() {
+            const currentLang = this.textContent === 'Francais' ? 'fr' : 'en';
+            this.textContent = currentLang === 'fr' ? 'English' : 'Francais';
+
+            const textsToChange = document.querySelectorAll('[data-lang-key]');
+            textsToChange.forEach(elem => {
+                const key = elem.getAttribute('data-lang-key');
+                elem.textContent = langData[currentLang][key];
+            });
+        });
+    </script>
+</body>
 </html>
